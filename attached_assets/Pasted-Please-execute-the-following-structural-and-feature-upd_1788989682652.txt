@@ -1,0 +1,33 @@
+Please execute the following structural and feature updates to the web app:
+
+1. Text Removal:
+   - Remove the phrase "من الجزائر إلى العالم" from the hero/header section.
+
+2. Price Calculator Modification:
+   - Separate the Price Calculator into an optional utility widget on the site (e.g., a standalone "حاسبة الأسعار" tool section).
+   - Do NOT make the price calculator mandatory for placing an order.
+
+3. Multi-Service Order System & Dynamic Form Fields:
+   Redesign the primary order form to allow clients to select from 5 distinct services. Show specific dynamic input fields based on the selected service:
+
+   A. Service 1: "الشراء من الإنترنت" (Physical E-Commerce Shopping)
+      - Required Fields:
+        * Product Link (رابط المنتج).
+        * Product Price in USD (سعر المنتج بالدولار - Optional).
+        * Specifications (اللون، المقاس، الكمية).
+        * Personal & Delivery Info: First & Last Name (الاسم واللقب), Phone Number (رقم الهاتف), Wilaya dropdown (58 Algerian Wilayas), Communes/Municipalities dropdown dependent on selected Wilaya (including Batna communes like القيقبة and راس العيون) plus a manual input option ("إضافة بلدية يدويًا"), and Postal Code (الرمز البريدي).
+
+   B. Service 2: "شراء الألعاب الإلكترونية" (PC/Console Game Purchases)
+      - Required Fields: Game Name (اسم اللعبة), Platform name (Steam, Epic Games, PlayStation, Xbox, etc.), Personal Name, Phone Number.
+
+   C. Service 3: "دفع الاشتراكات الرقمية" (Subscriptions Payment)
+      - Required Fields: App/Service Name (اسم التطبيق أو الخدمة), Subscription Tier/Plan (نوع العرض - شهري / سنوي / نوع الباقة), Personal Name, Phone Number.
+
+   D. Service 4: "شحن الألعاب والتطبيقات" (In-Game Top-Ups)
+      - Required Fields: Game Name (مثل Free Fire, PUBG, etc.), Player ID / Account details (معرف اللاعب أو الحساب), Currency/In-Game Amount requested (عدد الجواهر/الشدات/النقاط), Personal Name, Phone Number.
+
+   E. Service 5: "خدمات أخرى" (Custom / Other Services)
+      - Required Fields: Service Details (شرح الخدمة المطلوبة بالتفصيل), Budget/Notes, Personal Name, Phone Number.
+
+4. WhatsApp Order Dispatching:
+   - Ensure the "أرسل الطلب عبر واتساب" button formats all selected service parameters and user inputs into a clean, well-structured Arabic message sent to +213666848816.

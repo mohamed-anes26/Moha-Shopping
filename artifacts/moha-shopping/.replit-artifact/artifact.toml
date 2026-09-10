@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Moha International Shopping"
+description = "An Arabic-first ordering website for Moha, helping customers buy products from international online stores and arrange local delivery in Algeria with an instant DZD estimate and WhatsApp ordering."
+version = "1.0.0"
+id = "artifacts/moha-shopping"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23008
+
+[services.development]
+run = "pnpm --filter @workspace/moha-shopping run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/moha-shopping", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/moha-shopping/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23008"
+BASE_PATH = "/"
